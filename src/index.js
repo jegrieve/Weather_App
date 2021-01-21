@@ -1,12 +1,19 @@
 import './main.scss';
 import getApiData from './getApi.js';
-import fillInputs from './domHandlers.js';
+import { fillInputs, getCityInput } from './domHandlers.js';
 
-let apiData = getApiData('vancouver');
-apiData.then(function (data) {
-  fillInputs(data);
-  //   console.log(data);
+const submitInputBtn = document.getElementById('submit-city-btn');
+submitInputBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  getApiData(getCityInput()).then((d) => {
+    fillInputs(d);
+  });
 });
+
+// let apiData = getApiData('vancouver');
+// apiData.then(function (data) {
+//   fillInputs(data);
+// });
 
 //Want city and country
 //want temperature (F)

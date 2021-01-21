@@ -6,11 +6,18 @@ function fillInputs(data) {
   const temperature = document.getElementById('temperature');
   temperature.innerHTML = data.main.temp;
   const weather = document.getElementById('weather');
-  weather.innerHTML = data.weather.main;
+  weather.innerHTML = data.weather[0].main;
   const feelTemp = document.getElementById('feel-temp');
   feelTemp.innerHTML = data.main.feels_like;
   const humidity = document.getElementById('humidity');
   humidity.innerHTML = data.main.humidity;
 }
 
-export default fillInputs;
+function getCityInput() {
+  const cityInput = document.getElementById('get-city-input');
+  let value = cityInput.value;
+  cityInput.value = '';
+  return value;
+}
+
+export { fillInputs, getCityInput };
