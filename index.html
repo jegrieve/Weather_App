@@ -7,16 +7,20 @@
 </head>
 <body>
     <section class = "container-fluid">
-        <form>
+        <form class = "row d-flex justify-content-center">
+            <a href = "https://github.com/jegrieve"><img id = "github-img" src = "assets/github.png"></a>
             <input id = "get-city-input" type = "text" placeholder="Enter a city">
-            <button id = "submit-city-btn">Enter</button>
+            <button id = "submit-city-btn" class = "btn btn-info">Enter</button>
         </form>
-        <div id = "city"></div>
-        <div id = "country"></div>
-        <div id = "temperature"></div>
-        <div id = "weather"></div>
-        <div id = "feel-temp"></div>
-        <div id = "humidity"></div>
+        <main id = "main-contents">
+            <div id = "city"></div>
+            <div id = "country"></div>
+            <div id = "temperature"></div>
+            <div id = "weather"></div>
+            <div id = "feel-temp"></div>
+            <div id = "humidity"></div>
+            <div id = "wind"></div>
+        </main>
     </section>
     <script src="main.js"></script>
 </body>
